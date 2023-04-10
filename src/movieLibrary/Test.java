@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Test {
 	public static void main(String[] args) {
+		
 		Scanner sc = new Scanner(System.in);
 		int choice = 0;
 		int choice2 = 0;
@@ -16,12 +17,11 @@ public class Test {
 		printMenu();
 
 		while (choice != -1) {
-
 			System.out.print("Choise: ");
 			choice = sc.nextInt();
 
 			switch (choice) {
-
+			
 			case 1 -> {
 				System.out.println("✦•······················•✦•······················•✦");
 				sc.nextLine();
@@ -38,6 +38,7 @@ public class Test {
 					break;
 				}
 			}
+			
 			case 2 -> {
 				System.out.println("✦•······················•✦•······················•✦");
 				sc.nextLine();
@@ -56,7 +57,7 @@ public class Test {
 				System.out.println("✦•······················•✦•······················•✦");
 				break;
 			}
-
+			
 			case 3 -> {
 				System.out.println("✦•······················•✦•······················•✦");
 				System.out.println("1. Search user");
@@ -81,6 +82,7 @@ public class Test {
 				System.out.println("✦•······················•✦•······················•✦");
 				break;
 			}
+			
 			case 4 -> {
 				System.out.println("✦•······················•✦•······················•✦");
 				sc.nextLine();
@@ -92,30 +94,34 @@ public class Test {
 			}
 
 			case 5 -> {
-
 				System.out.println("✦•······················•✦•······················•✦");
 				System.out.println("How do you want to search?");
 				System.out.println("1. By Director");
 				System.out.println("2. By Title");
 				choice2 = sc.nextInt();
 				sc.nextLine();
+				
 				switch (choice2) {
+				
 				case 1:
 					System.out.println("Director: ");
 					String director = sc.nextLine();
 					Movie movieByDirector = admin1.searchByDirector(director);
 					System.out.println(movieByDirector);
 					break;
+					
 				case 2:
 					System.out.println("Title: ");
 					String title = sc.nextLine();
 					Movie movieByTitle = admin1.searchByTitle(title);
 					System.out.println(movieByTitle);
 					break;
+					
 				default:
 					System.out.println("Invalid choice.");
 					break;
 				}
+				
 				System.out.println("✦•······················•✦•······················•✦");
 				break;
 			}
@@ -141,9 +147,9 @@ public class Test {
 				String releaseDate = sc.nextLine();
 				Movie movie = new Movie(id, title, director, actors, genre, imdbRate, storyline, releaseDate);
 				admin1.addMovie(movie);
-
 				break;
 			}
+			
 			case 7 -> {
 				System.out.println("✦•······················•✦•······················•✦");
 				admin1.listMovies();
@@ -189,7 +195,5 @@ public class Test {
 		System.out.println("8: Delete movie.");
 		System.out.println("9: Log out");
 		System.out.println("-1: Quit.");
-
 	}
-
 }

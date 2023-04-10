@@ -45,9 +45,7 @@ public class MovieAdmin {
 			"2009");
 
 	public void initializeMovies() {
-
 		allMovies = new Movie[] { movie1, movie2, movie3, movie4, movie5, movie6, movie7, movie8, movie9 };
-
 	}
 
 	public Movie searchByTitle(String title) {
@@ -66,11 +64,9 @@ public class MovieAdmin {
 		for (Movie movie : allMovies) {
 			if (movie.getDirector().equalsIgnoreCase(director)) {
 				searched = movie;
-
 			}
 		}
 		return searched;
-
 	}
 
 	public void listMovies() {
@@ -116,5 +112,4 @@ public class MovieAdmin {
 			return false;
 		}
 	}
-
 }

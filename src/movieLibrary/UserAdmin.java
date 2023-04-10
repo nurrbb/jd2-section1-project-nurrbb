@@ -25,9 +25,8 @@ public class UserAdmin {
 			}
 		}
 		return searched;
-
 	}
-
+	
 	public void listAllUsers() {
 		for (User user : allUsers) {
 			if (user != null) {
@@ -35,7 +34,7 @@ public class UserAdmin {
 			}
 		}
 	}
-
+	
 	public boolean login(String username, String password) {
 		for (User user : allUsers) {
 			if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
@@ -45,15 +44,14 @@ public class UserAdmin {
 		}
 		return false;
 	}
-
+	
 	public void logout() {
 		if (currentUser != null) {
 			System.out.println("Logged out..." + currentUser.getUsername());
 		} else
 			System.out.println("Error!...");
-
 	}
-
+	
 	public boolean crateUser(User newUser) {
 		for (User user : allUsers) {
 			if (user != null && user.getUsername().equalsIgnoreCase(newUser.getUsername())) {
@@ -68,7 +66,7 @@ public class UserAdmin {
 		System.out.println("User created successfully: " + newUser.getUsername());
 		return true;
 	}
-
+	
 	public boolean deleteUser(String username) {
 		boolean isDeleted = false;
 		User[] newUserArray = new User[allUsers.length - 1];
@@ -89,5 +87,4 @@ public class UserAdmin {
 			return false;
 		}
 	}
-
 }
