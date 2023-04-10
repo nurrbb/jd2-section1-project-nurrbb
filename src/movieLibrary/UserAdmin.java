@@ -68,26 +68,26 @@ public class UserAdmin {
 		System.out.println("User created successfully: " + newUser.getUsername());
 		return true;
 	}
-	
+
 	public boolean deleteUser(String username) {
-	    boolean isDeleted = false;
-	    User[] newUserArray = new User[allUsers.length - 1];
-	    int index = 0;
-	    for (User user : allUsers) {
-	        if (user != null && !user.getUsername().equalsIgnoreCase(username)) {
-	        	newUserArray[index++] = user;
-	        } else if (user != null && user.getUsername().equalsIgnoreCase(username)) {
-	            isDeleted = true;
-	        }
-	    }
-	    allUsers = newUserArray;
-	    if (isDeleted) {
-	        System.out.println("Movie deleted successfully: " + username);
-	        return true;
-	    } else {
-	        System.out.println("Error: Movie not found.");
-	        return false;
-	    }
+		boolean isDeleted = false;
+		User[] newUserArray = new User[allUsers.length - 1];
+		int index = 0;
+		for (User user : allUsers) {
+			if (user != null && !user.getUsername().equalsIgnoreCase(username)) {
+				newUserArray[index++] = user;
+			} else if (user != null && user.getUsername().equalsIgnoreCase(username)) {
+				isDeleted = true;
+			}
+		}
+		allUsers = newUserArray;
+		if (isDeleted) {
+			System.out.println("Movie deleted successfully: " + username);
+			return true;
+		} else {
+			System.out.println("Error: Movie not found.");
+			return false;
+		}
 	}
 
 }

@@ -77,7 +77,7 @@ public class MovieAdmin {
 	public void listMovies() {
 		for (Movie movie : allMovies) {
 			if (movie != null) {
-				System.out.println(movie +"\n");
+				System.out.println(movie + "\n");
 			}
 		}
 	}
@@ -96,26 +96,26 @@ public class MovieAdmin {
 		System.out.println("Movie added successfully: " + newMovie.getTitle());
 		return true;
 	}
-	
+
 	public boolean deleteMovie(String title) {
-	    boolean isDeleted = false;
-	    Movie[] newMovieArray = new Movie[allMovies.length - 1];
-	    int index = 0;
-	    for (Movie movie : allMovies) {
-	        if (movie != null && !movie.getTitle().equalsIgnoreCase(title)) {
-	            newMovieArray[index++] = movie;
-	        } else if (movie != null && movie.getTitle().equalsIgnoreCase(title)) {
-	            isDeleted = true;
-	        }
-	    }
-	    allMovies = newMovieArray;
-	    if (isDeleted) {
-	        System.out.println("Movie deleted successfully: " + title);
-	        return true;
-	    } else {
-	        System.out.println("Error: Movie not found.");
-	        return false;
-	    }
+		boolean isDeleted = false;
+		Movie[] newMovieArray = new Movie[allMovies.length - 1];
+		int index = 0;
+		for (Movie movie : allMovies) {
+			if (movie != null && !movie.getTitle().equalsIgnoreCase(title)) {
+				newMovieArray[index++] = movie;
+			} else if (movie != null && movie.getTitle().equalsIgnoreCase(title)) {
+				isDeleted = true;
+			}
+		}
+		allMovies = newMovieArray;
+		if (isDeleted) {
+			System.out.println("Movie deleted successfully: " + title);
+			return true;
+		} else {
+			System.out.println("Error: Movie not found.");
+			return false;
+		}
 	}
 
 }

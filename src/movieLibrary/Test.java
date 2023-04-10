@@ -139,7 +139,7 @@ public class Test {
 				String storyline = sc.nextLine();
 				System.out.println("Release Date: ");
 				String releaseDate = sc.nextLine();
-				Movie movie = new Movie(id,title,director,actors,genre,imdbRate,storyline,releaseDate);
+				Movie movie = new Movie(id, title, director, actors, genre, imdbRate, storyline, releaseDate);
 				admin1.addMovie(movie);
 
 				break;
@@ -165,7 +165,7 @@ public class Test {
 				admin2.logout();
 				System.out.println("✦•······················•✦•······················•✦");
 			}
-			
+
 			case -1 -> {
 				System.out.println("✦•······················•✦•······················•✦");
 				System.out.println("Have a nice day! ヾ(＾ ∇ ＾)");

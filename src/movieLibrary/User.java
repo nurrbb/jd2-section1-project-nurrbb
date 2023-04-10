@@ -1,12 +1,12 @@
 package movieLibrary;
 
 public class User {
-	
+
 	private final int id;
 	private String username;
 	private String email;
 	private String password;
-	
+
 	public User(int id, String username, String email, String password) {
 		this.id = id;
 		this.username = username;
@@ -46,7 +46,5 @@ public class User {
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", email=" + email + ", password=" + password + "]" + '\n';
 	}
-	
-	
 
 }
