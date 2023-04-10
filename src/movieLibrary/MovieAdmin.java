@@ -59,7 +59,6 @@ public class MovieAdmin {
 			}
 		}
 		return searched;
-
 	}
 
 	public Movie searchByDirector(String director) {
